@@ -10,8 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 USER_METRICS = False
 if USER_METRICS:
-    app.config['SQLALCHEMY_DATABASE_URI']= 'no'
-    app.config['SQLALCHEMY_DATABASE_URI']= 'hehe vandina'
+    app.config['SQLALCHEMY_DATABASE_URI']= "postgresql://lmplraoaopfjik:f5646a3cb32a8e8a64424eca55b0b3013206851a4e00b92f162d65bbac835a98@ec2-54-85-56-210.compute-1.amazonaws.com:5432/d8cg969jasbkcr"
 
     class Users(db.Model):
         sno = db.Column(db.Integer, nullable=True, primary_key=True)
@@ -75,6 +74,7 @@ def api():
     if request.method == 'POST':
         # seting the cookie
         token = request.form.get('token')
+
         # main cookie
         expire_date= datetime.datetime.now() + datetime.timedelta(days=365)
         cookieToken = make_response(render_template('index.html'))

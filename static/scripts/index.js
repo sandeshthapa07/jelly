@@ -20,6 +20,7 @@ function firstBotMessage() {
     var nameX = localStorage.getItem('nameX')
     let firstMessage = `Namaste ${nameX}, ma tapaiko bot jelly, malai 'unicode' athawa 'romanized nepali' athawa\
     angrezi bhasa ma kura garna man parchha. Aaunus, hamro bartalaap suru garum. `
+
     document.getElementById("botStarterMessage").innerHTML = `<p class="botText search"><img src="../static/img/chatbot1.png"><span class="botMessage" > ${firstMessage}</span></p>`;
 
     let time = getTime();
